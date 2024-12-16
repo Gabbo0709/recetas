@@ -1,12 +1,13 @@
 {
   "name": "recetas",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "dev": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "app:dist": "electron-builder"
   },
+  "type": "commonjs",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -14,5 +15,8 @@
   "devDependencies": {
     "electron": "33.2.1",
     "electron-builder": "25.1.8"
+  },
+    "build": {
+      "appId": "com.veterinaria.app"
   }
 }

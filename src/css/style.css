@@ -1,0 +1,87 @@
+html {
+    overflow-y: auto;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.button-link {
+    min-width: 6em;
+    ;
+    width: 8.8em;
+    font-size: 1.8em;
+}
+
+td {
+    padding: 0.5em;
+}
+
+th {
+    padding: 0.5em;
+}
+
+.input-curp {
+    text-transform: uppercase;
+}
+
+.is-floating {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    z-index: 1000;
+    /* Asegura que el elemento flote sobre otros contenidos */
+    width: 30%;
+    /* Ajusta el ancho según sea necesario */
+}
+
+.is-sticky {
+    position: -webkit-sticky; /* Para compatibilidad con navegadores WebKit */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que el elemento se mantenga en la parte superior */
+    background-color: inherit; /* Mantiene el fondo del contenedor */
+}
+
+.is-floating-bottom {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1em;
+    z-index: 1000;
+    /* Asegura que el elemento flote sobre otros contenidos */
+    width: auto;
+    /* Ajusta el ancho según sea necesario */
+}
+
+.round-button {
+    border-radius: 50%;
+    /* Hace que el botón sea redondo */
+    padding: 0.5em;
+    /* Ajusta el padding interno */
+    font-size: 1.5em;
+    /* Ajusta el tamaño del texto */
+    line-height: 1;
+    /* Asegura que el texto no se deforme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Centra el texto */
+    width: calc(1em + 0.2em + 2 * 0.5em);
+    /* Calcula el ancho del botón */
+    height: calc(1em + 0.2em + 2 * 0.5em);
+    /* Calcula la altura del botón */
+}
+
+.hidden {
+    display: none;
+}
+
+#qrcode {
+    display: inline-block;
+}

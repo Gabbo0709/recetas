@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impresión de Receta Médica</title>
+    <link rel="stylesheet" href="../css/bulma/css/bulma.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/curp.js"></script>
+    <script src="../js/impresion.js"></script>
+    <script src="../js/qrcode.min.js"></script>
+</head>
+
+<body>
+    <section class="section hero is-success">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">Receta Médica</h1>
+                <div class="field">
+                    <label class="label">Nombre del Médico</label>
+                    <div class="control">
+                        <p><strong>Dr. Pablo Rendón Reyes</strong></p>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Cédula del Médico</label>
+                    <div class="control">
+                        <p><strong>17124101</strong></p>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Matrícula del Médico</label>
+                    <div class="control">
+                        <p><strong>2020301961</strong></p>
+                    </div>
+                </div>
+                <div class="field has-text-centered">
+                    <div id="qrcode"></div>
+                </div>
+                <div class="field is-grouped is-grouped-centered">
+                    <div class="control">
+                        <button class="button is-link" id="imprimir">Imprimir</button>
+                    </div>
+                    <div class="control has-text-centered">
+                        <a class="button is-danger" href="./index.html" id="salir">Salir</a>
+                    </div>
+                </div>
+                <div id="imprimiendo" class="hidden">
+                    <progress class="progress is-large is-info" max="100">60%</progress>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

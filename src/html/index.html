@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../css/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<script defer src="../js/busqueda.js"></script>
+<script defer src="../js/curp.js"></script>
+<body>
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-two-thirds">
+                        <form class="box">
+                            <div class="field has-text-centered">
+                                <label class="title" for="curp">Buscar CURP</label>
+                                <hr>
+                                <div class="control">
+                                    <input placeholder="CURP" class="input input-curp" type="text" id="curp" name="curp"
+                                        pattern="[A-Za-z0-9]+" required>
+                                </div>
+                            </div>
+                            <div class="field has-text-centered">
+                                <div class="control">
+                                    <button class="button is-link" id="search" type="button">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

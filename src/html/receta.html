@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Receta Médica</title>
+    <link rel="stylesheet" href="../css/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<script defer src="../js/curp.js"></script>
+<script defer src="../js/receta.js"></script>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-third is-offset-two-thirds is-floating floating-element" id="flotante-paciente">
+                    <div class="box" id="infoPaciente">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <h2 class="title is-4">Receta Médica</h2>
+                <form>
+                    <div class="field">
+                        <label class="label" for="fecha">Fecha</label>
+                        <div class="control">
+                            <input class="input" type="date" id="fecha" name="fecha" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="solicitud">Tipo de Solicitud</label>
+                        <div class="control">
+                            <input class="input" type="text" id="solicitud" name="tipo_solicitud" required value="Ordinaria" readonly>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="diagnostico">Diagnóstico</label>
+                        <div class="control">
+                            <textarea class="textarea" id="diagnostico" name="diagnostico" required></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="complemento">Complemento de Diagnóstico</label>
+                        <div class="control">
+                            <textarea class="textarea" id="complemento" name="complemento_diagnostico" required></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="medicamento">Medicamento</label>
+                        <div class="control">
+                            <textarea class="textarea" id="medicamento" name="medicamento" required></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="indicaciones">Indicaciones</label>
+                        <div class="control">
+                            <textarea class="textarea" id="indicaciones" name="indicaciones" required></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="box">
+                <h2 class="title is-4">Información del Médico</h2>
+                <p><strong>Nombre:</strong> Dr. Pablo Rendón Reyes</p>
+                <p><strong>Cédula Profesional:</strong> 17124101</p>
+                <p><strong>Matrícula:</strong> 2020301961</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-third is-offset-two-thirds is-floating-bottom floating-element" id="floating-confirmar">
+                    <button class="button is-primary is-fullwidth" type="button" id="guardar">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal" id="confirmacion">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <form>
+                <div class="field">
+                    <label class="label is-size-4">¿Desea guardar la receta médica?</label>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-primary is-size-4" type="button" id="aceptar">Aceptar</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-danger is-size-4" type="button" id="cancelar">Cancelar</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
